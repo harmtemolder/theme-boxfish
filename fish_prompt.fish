@@ -2,9 +2,10 @@ function fish_prompt -d "A simple and elegant fish theme with compact vi mode su
   set -l last_status $status
   set -l cwd (prompt_pwd)
 
+  # Add exclamation point on non-zero exit status
   if not test $last_status -eq 0
     set_color --bold white -b red
-    echo -n ' ! '
+    echo -n " ! "
     set_color normal
   end
 
@@ -13,19 +14,16 @@ function fish_prompt -d "A simple and elegant fish theme with compact vi mode su
   echo -n " $cwd "
 
   # Show git branch and dirty state
-  set -l git_branch (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
-  set -l git_dirty (command git status -s --ignore-submodules=dirty 2> /dev/null)
-  if test -n "$git_branch"
-    if test -n "$git_dirty"
-      set_color black -b yellow
-      echo -n " $git_branch "
-    else
-      set_color black -b green
-      echo -n " $git_branch "
-    end
+  command git diff --no-ext-diff --quiet --exit-code 2> /dev/null
+  if test $status -ne 0
+    set -g __fish_git_prompt_color black -b yellow
+    echo -n (fish_git_prompt " %s ")
+  else
+    set -g __fish_git_prompt_color black -b green
+    echo -n (fish_git_prompt " %s ")
   end
 
   # Add a space
   set_color normal
-  echo -n ' '
+  echo -n " "
 end
