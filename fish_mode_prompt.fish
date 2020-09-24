@@ -1,4 +1,4 @@
-function fish_mode_prompt
+function fish_mode_prompt -d "Prefix a single, colored block indicating vi mode"
   if [ $fish_key_bindings = fish_vi_key_bindings ]
     switch $fish_bind_mode
       case default

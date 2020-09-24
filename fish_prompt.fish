@@ -1,4 +1,4 @@
-function fish_prompt
+function fish_prompt -d "A simple and elegant fish theme with compact vi mode support"
   set -l last_status $status
   set -l cwd (prompt_pwd)
 
