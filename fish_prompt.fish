@@ -36,7 +36,8 @@ function fish_prompt -d "A simple and elegant fish theme with compact vi mode su
     echo -n (fish_git_prompt " %s ")
   end
 
-  # Add a space
+  # Add a new line and arrow
   set_color normal
-  echo -n " "
+  echo
+  echo -n "↳ "
 end
