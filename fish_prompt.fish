@@ -3,7 +3,7 @@ function fish_prompt -d "A simple and elegant fish theme with compact vi mode su
   set -l cwd (prompt_pwd)
 
   # Add exclamation point on non-zero exit status
-  if not test $last_status -eq 0
+  if test $last_status -ne 0
     set_color --bold white -b red
     echo -n " ! "
     set_color normal
