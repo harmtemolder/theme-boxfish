@@ -17,5 +17,6 @@ function fish_mode_prompt -d "Prefix a single, colored block indicating vi mode"
         set_color -b magenta
     end
     echo -n " "
+    set_color normal
   end
 end
