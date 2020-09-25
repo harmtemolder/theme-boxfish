@@ -1,40 +1,38 @@
-<img src="https://cdn.rawgit.com/oh-my-fish/oh-my-fish/e4f1c2e0219a17e2c748b824004c8d0b38055c16/docs/logo.svg" align="left" width="144px" height="144px"/>
+# boxerfish
 
-#### boxfish
-> A theme for [Oh My Fish][omf-link].
+ A simple and elegant fish theme with compact vi mode support. Adapted from [Joel Wanner's boxfish theme][boxfish].
 
-[![MIT License](https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square)](/LICENSE)
-[![Fish Shell Version](https://img.shields.io/badge/fish-v2.2.0-007EC7.svg?style=flat-square)](https://fishshell.com)
-[![Oh My Fish Framework](https://img.shields.io/badge/Oh%20My%20Fish-Framework-007EC7.svg?style=flat-square)](https://www.github.com/oh-my-fish/oh-my-fish)
-
-<br/>
+[![MIT License][license-badge]][license]
 
 ## Install
 
+Install with [`fisher`][fisher]:
+
 ```fish
-$ omf install boxfish
+fisher add harmtemolder/boxerfish-theme
 ```
 
 ## Features
 
+From [the original boxfish theme][boxfish]:
 * Minimalist ASCII-only prompt
 * The most compact vi mode support possible (only 1 character!)
 * Error indicator on return code != 0
 
-## Screenshot
+Plus:
+* User & hostname
+* Date and time on the right
+* Actual prompt on a second line
+* `iterm2_prompt_mark` to easily jump to previous prompts with <kbd>control</kbd>+<kbd>command</kbd>+<kbd>↑</kbd>/<kbd>↓</kbd>(see [iTerm2's Shell Integration][iterm-shell-integration])
 
-<p align="center">
-<img src="screenshot.png">
-</p>
+## License
 
-# License
+[MIT][license] © [harmtemolder][author] et [al][contributors]
 
-[MIT][mit] © [joelwanner][author] et [al][contributors]
-
-
-[mit]:            https://opensource.org/licenses/MIT
-[author]:         https://github.com/joelwanner
-[contributors]:   https://github.com/joelwanner/theme-boxfish/graphs/contributors
-[omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
-
-[license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
+[author]: https://github.com/harmtemolder
+[contributors]: /graphs/contributors
+[fisher]: https://github.com/jorgebucaran/fisher
+[iterm-shell-integration]: https://www.iterm2.com/documentation-shell-integration.html
+[license-badge]: https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
+[license]: /LICENSE
+[boxfish]: https://github.com/joelwanner/theme-boxfish
