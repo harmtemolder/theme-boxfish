@@ -2,7 +2,7 @@
 [x] Add user and hostname
 [x] Add new line
 [x] Add `iterm2_prompt_mark` (see https://www.iterm2.com/documentation-shell-integration.html)
-[] Add conda environment
-[] Make user and hostname conditional, e.g. only on SSH
+[x] Add venv environment
+[x] Make user and hostname conditional, e.g. only on SSH
 [] Add screenshot to README.md
 [] Add to Oh My Fish
