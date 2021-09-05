@@ -9,18 +9,16 @@ function fish_prompt -d "A simple and elegant fish theme with compact vi mode su
     set_color normal
   end
 
-  # Set background for user and host
+  # Set color for user and host
   set_color white -b blue
   echo -n " "
 
-  # If we're running via SSH, add underline
+  # Only add user and host if we're running via SSH
   if set -q SSH_TTY
     set_color --underline
+    echo -n "$USER@$hostname:"
+    set_color normal
   end
-
-  # Add user and host
-  echo -n "$USER@"(prompt_hostname)":"
-  set_color normal
 
   # Display current path
   set_color --bold white -b blue
