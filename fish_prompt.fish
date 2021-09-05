@@ -49,11 +49,11 @@ function fish_prompt -d "A simple and elegant fish theme with compact vi mode su
     set_color normal
   end
 
-  # Add a new line and arrow on local machines, just a space on remotes
+  # Add a new line on local machines, just a space on remotes
   if set -q SSH_TTY
     echo " "
   else
     echo
-    echo -n "↳ "
+    echo
   end
 end
