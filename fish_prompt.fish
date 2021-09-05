@@ -37,12 +37,15 @@ function fish_prompt -d "A simple and elegant fish theme with compact vi mode su
   echo -n (fish_git_prompt " git:%s ")
   set_color normal
 
-  # Show conda environment, if any
-  if set -q CONDA_DEFAULT_ENV
+  # Show virtual environment, if any
+  if set -q VIRTUAL_ENV
     set_color white -b cyan
-    echo -n " conda:"
+    echo -n " venv:"
     set_color --bold
-    echo -n (basename (dirname $CONDA_DEFAULT_ENV))"/"(basename $CONDA_DEFAULT_ENV)" "
+    if test "$VIRTUAL_ENV" != "base"
+      echo -n (basename (dirname $VIRTUAL_ENV))"/"
+    end
+    echo -n (basename $VIRTUAL_ENV)" "
     set_color normal
   end
 
